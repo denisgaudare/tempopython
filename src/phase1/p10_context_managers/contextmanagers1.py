@@ -66,9 +66,11 @@ class Logger:
 
 # Utilisation avec `with`
 with Logger("../error.log") as logger:
+    #code habituel
     logger.log("Démarrage de l'application")
+    # code habituel
     logger.log("Une action a été effectuée")
-
+    #code habituel
 
 class RedirectStdout:
     def __init__(self, filename):

@@ -11,3 +11,6 @@ def mon_context_manager():
         print("Sortie du contexte")
 
 
+
+with mon_context_manager() as valeur:
+    print(valeur)

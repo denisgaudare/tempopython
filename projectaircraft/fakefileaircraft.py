@@ -5,14 +5,13 @@ from faker import Faker
 # Initialisation de Faker
 fake = Faker()
 
-
 # Génération de N avions
-def generate_aircraft_data(n, filename="aircrafts.csv"):
+def generate_aircraft_data(n, filename="data/flights.csv"):
     """
-    Génère un fichier CSV avec des avions fictifs.
+    Génère un fichier CSV avec des avions fi&ctifs.
 
     :param n: Nombre d'avions à générer
-    :param filename: Nom du fichier de sortie (par défaut 'aircrafts.csv')
+    :param filename: Nom du fichier de sortie (par défaut 'flights.csv')
     """
     # Définition des noms de colonnes
     fieldnames = ["flight_name", "capacity", "fuel", "airline", "manufacture_year", "range_km", "status"]
@@ -51,4 +50,4 @@ def generate_aircraft_data(n, filename="aircrafts.csv"):
 
 
 # Exemple d'utilisation
-generate_aircraft_data(10000)  # Génère un fichier CSV avec 10 avions
+generate_aircraft_data(100000)  # Génère un fichier CSV avec 10 avions

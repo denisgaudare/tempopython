@@ -14,7 +14,7 @@ class Aircraft:
         return f"Avion {self.flight_name} - Capacité: {self.capacity} passagers - Carburant: {self.fuel:.2f}%"
 
 
-def load_aircrafts_from_csv(filename="aircrafts.csv"):
+def load_aircrafts_from_csv(filename="flights.csv"):
     """
     Lit un fichier CSV et crée un dictionnaire d'objets Aircraft.
 

@@ -1,0 +1,4 @@
+flight_id,departure_airport,departure_time,delay_minutes
+1,CDG,2024-12-01T08:00:00,15
+2,JFK,2024-12-01T09:30:00,0
+3,LHR,2024-12-01T11:15:00,45

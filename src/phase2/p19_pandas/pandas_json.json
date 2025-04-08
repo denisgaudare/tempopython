@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Vol A",
+    "details": {
+      "departure": {
+        "airport": "CDG",
+        "time": "2024-06-01T08:00:00"
+      },
+      "arrival": {
+        "airport": "JFK",
+        "time": "2024-06-01T16:00:00"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "Vol B",
+    "details": {
+      "departure": {
+        "airport": "LHR",
+        "time": "2024-06-02T09:00:00"
+      },
+      "arrival": {
+        "airport": "DXB",
+        "time": "2024-06-02T18:00:00"
+      }
+    }
+  }
+]

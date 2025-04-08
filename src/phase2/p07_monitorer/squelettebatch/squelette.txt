@@ -1,0 +1,7 @@
+my_batch_project/
+├── main.py
+├── monitor.py
+├── config.py
+├── requirements.txt
+└── logs/
+    └── app.log

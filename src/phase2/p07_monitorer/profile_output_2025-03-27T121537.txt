@@ -1,0 +1,51 @@
+Timer unit: 1e-07 s
+
+Total time: 1.61917 s
+File: D:\workspaces\workspace-python\pythonansys\src\phase2\p07_monitorer\p00line_prof.py
+Function: is_prime at line 7
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     7                                           @profile
+     8                                           def is_prime(n):
+     9                                               '''
+    10                                               Check if the number "n" is prime, with n > 1.
+    11                                               Returns a boolean, True if n is prime.
+    12                                               '''
+    13    100000     403425.0      4.0      2.5      max_val = n ** 0.5
+    14    100000     374773.0      3.7      2.3      stop = int(max_val + 1)
+    15   2755287    7354482.0      2.7     45.4      for i in range(2, stop):
+    16   2745693    7697239.0      2.8     47.5          if n % i == 0:
+    17     90406     321963.0      3.6      2.0              return False
+    18      9594      39866.0      4.2      0.2      return True
+
+Total time: 3.33557 s
+File: D:\workspaces\workspace-python\pythonansys\src\phase2\p07_monitorer\p00line_prof.py
+Function: find_primes at line 21
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    21                                           @profile
+    22                                           def find_primes(size):
+    23         1         12.0     12.0      0.0      primes = []
+    24    100001     327925.0      3.3      1.0      for n in range(size):
+    25    100000   32699033.0    327.0     98.0          flag = is_prime(n)
+    26    100000     291853.0      2.9      0.9          if flag:
+    27      9594      36901.0      3.8      0.1              primes.append(n)
+    28         1          5.0      5.0      0.0      return primes
+
+Total time: 3.41728 s
+File: D:\workspaces\workspace-python\pythonansys\src\phase2\p07_monitorer\p00line_prof.py
+Function: main at line 31
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    31                                           @profile
+    32                                           def main():
+    33         1        285.0    285.0      0.0      print('start calculating')
+    34         1   34172242.0    3e+07    100.0      primes = find_primes(100000)
+    35         1        286.0    286.0      0.0      print(f'done calculating. Found {len(primes)} primes.')
+
+  1.62 seconds - D:\workspaces\workspace-python\pythonansys\src\phase2\p07_monitorer\p00line_prof.py:7 - is_prime
+  3.34 seconds - D:\workspaces\workspace-python\pythonansys\src\phase2\p07_monitorer\p00line_prof.py:21 - find_primes
+  3.42 seconds - D:\workspaces\workspace-python\pythonansys\src\phase2\p07_monitorer\p00line_prof.py:31 - main

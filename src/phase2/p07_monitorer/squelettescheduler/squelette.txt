@@ -1,0 +1,7 @@
+my_worker_project/
+├── worker.py
+├── monitor.py
+├── config.py
+├── requirements.txt
+└── logs/
+    └── worker.log

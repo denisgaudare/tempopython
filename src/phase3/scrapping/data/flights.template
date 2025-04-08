@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des vols</title>
+    <style>
+        body { font-family: sans-serif; }
+        .flight { padding: 8px; margin: 4px 0; border-bottom: 1px solid #ccc; }
+        .flight span { display: inline-block; width: 100px; }
+    </style>
+</head>
+<body>
+    <h1>Liste des vols</h1>
+    {% for flight in flights %}
+        <div class="flight">
+            <span class="flight-number">{{ flight.number }}</span>
+            <span class="departure">{{ flight.departure }}</span>
+            <span class="arrival">{{ flight.arrival }}</span>
+            <span class="time">{{ flight.time }}</span>
+        </div>
+    {% endfor %}
+</body>
+</html>

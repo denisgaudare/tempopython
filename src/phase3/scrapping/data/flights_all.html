@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des vols</title>
+    <style>
+        body { font-family: sans-serif; }
+        .flight { padding: 8px; margin: 4px 0; border-bottom: 1px solid #ccc; }
+        .flight span { display: inline-block; width: 100px; }
+    </style>
+</head>
+<body>
+    <h1>Liste des vols</h1>
+    
+        <div class="flight">
+            <span class="flight-number">LH7583</span>
+            <span class="departure">JFK</span>
+            <span class="arrival">LHR</span>
+            <span class="time">15:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL2541</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">MAD</span>
+            <span class="time">15:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL5023</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">LHR</span>
+            <span class="time">19:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL7921</span>
+            <span class="departure">DXB</span>
+            <span class="arrival">LHR</span>
+            <span class="time">06:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">UA9971</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">CDG</span>
+            <span class="time">17:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL4735</span>
+            <span class="departure">ORD</span>
+            <span class="arrival">LHR</span>
+            <span class="time">21:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL6891</span>
+            <span class="departure">ORD</span>
+            <span class="arrival">LAX</span>
+            <span class="time">21:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">AA1195</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">DXB</span>
+            <span class="time">23:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">LH3229</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">SIN</span>
+            <span class="time">17:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">BA7287</span>
+            <span class="departure">LHR</span>
+            <span class="arrival">LAX</span>
+            <span class="time">08:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">UA9094</span>
+            <span class="departure">LAX</span>
+            <span class="arrival">DXB</span>
+            <span class="time">21:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ888</span>
+            <span class="departure">LAX</span>
+            <span class="arrival">FRA</span>
+            <span class="time">06:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL9164</span>
+            <span class="departure">LAX</span>
+            <span class="arrival">AMS</span>
+            <span class="time">23:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ1504</span>
+            <span class="departure">JFK</span>
+            <span class="arrival">CDG</span>
+            <span class="time">16:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL4361</span>
+            <span class="departure">DXB</span>
+            <span class="arrival">ORD</span>
+            <span class="time">15:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">EK5442</span>
+            <span class="departure">ORD</span>
+            <span class="arrival">DXB</span>
+            <span class="time">18:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL9580</span>
+            <span class="departure">SIN</span>
+            <span class="arrival">DXB</span>
+            <span class="time">13:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL3529</span>
+            <span class="departure">JFK</span>
+            <span class="arrival">SIN</span>
+            <span class="time">20:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">AF3640</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">DXB</span>
+            <span class="time">11:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">AA191</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">FRA</span>
+            <span class="time">10:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL3517</span>
+            <span class="departure">JFK</span>
+            <span class="arrival">LHR</span>
+            <span class="time">18:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL1483</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">ORD</span>
+            <span class="time">12:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">IB7423</span>
+            <span class="departure">AMS</span>
+            <span class="arrival">JFK</span>
+            <span class="time">08:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">BA2565</span>
+            <span class="departure">ORD</span>
+            <span class="arrival">CDG</span>
+            <span class="time">00:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL3672</span>
+            <span class="departure">LHR</span>
+            <span class="arrival">JFK</span>
+            <span class="time">06:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL7615</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">LHR</span>
+            <span class="time">18:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL6792</span>
+            <span class="departure">LHR</span>
+            <span class="arrival">AMS</span>
+            <span class="time">04:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">EK3011</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">SIN</span>
+            <span class="time">13:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">IB5345</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">ORD</span>
+            <span class="time">05:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL1440</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">DXB</span>
+            <span class="time">06:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">LH4311</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">ORD</span>
+            <span class="time">04:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">BA3327</span>
+            <span class="departure">LAX</span>
+            <span class="arrival">ORD</span>
+            <span class="time">13:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL9966</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">DXB</span>
+            <span class="time">03:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">IB5163</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">MAD</span>
+            <span class="time">15:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL5814</span>
+            <span class="departure">JFK</span>
+            <span class="arrival">ORD</span>
+            <span class="time">04:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ7450</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">DXB</span>
+            <span class="time">14:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">EK9566</span>
+            <span class="departure">ORD</span>
+            <span class="arrival">LAX</span>
+            <span class="time">00:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">BA8139</span>
+            <span class="departure">DXB</span>
+            <span class="arrival">CDG</span>
+            <span class="time">01:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">EK6712</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">JFK</span>
+            <span class="time">15:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL6265</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">CDG</span>
+            <span class="time">21:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">UA7167</span>
+            <span class="departure">ORD</span>
+            <span class="arrival">CDG</span>
+            <span class="time">23:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">AA9479</span>
+            <span class="departure">LHR</span>
+            <span class="arrival">SIN</span>
+            <span class="time">02:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL6178</span>
+            <span class="departure">ORD</span>
+            <span class="arrival">CDG</span>
+            <span class="time">19:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">LH3655</span>
+            <span class="departure">LHR</span>
+            <span class="arrival">CDG</span>
+            <span class="time">12:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">AF6043</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">SIN</span>
+            <span class="time">21:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL2931</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">FRA</span>
+            <span class="time">12:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">BA2528</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">SIN</span>
+            <span class="time">18:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">EK9573</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">DXB</span>
+            <span class="time">07:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ3616</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">LHR</span>
+            <span class="time">18:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">LH6380</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">MAD</span>
+            <span class="time">12:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ8835</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">AMS</span>
+            <span class="time">08:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">BA8015</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">JFK</span>
+            <span class="time">13:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">UA4842</span>
+            <span class="departure">JFK</span>
+            <span class="arrival">SIN</span>
+            <span class="time">06:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">UA8504</span>
+            <span class="departure">JFK</span>
+            <span class="arrival">LHR</span>
+            <span class="time">11:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">IB5516</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">ORD</span>
+            <span class="time">23:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ7579</span>
+            <span class="departure">SIN</span>
+            <span class="arrival">CDG</span>
+            <span class="time">03:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">LH7253</span>
+            <span class="departure">AMS</span>
+            <span class="arrival">ORD</span>
+            <span class="time">14:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">BA8243</span>
+            <span class="departure">SIN</span>
+            <span class="arrival">DXB</span>
+            <span class="time">19:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ6847</span>
+            <span class="departure">LAX</span>
+            <span class="arrival">LHR</span>
+            <span class="time">04:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ2912</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">FRA</span>
+            <span class="time">10:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">AF9606</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">CDG</span>
+            <span class="time">15:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">BA1988</span>
+            <span class="departure">JFK</span>
+            <span class="arrival">CDG</span>
+            <span class="time">14:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL7197</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">FRA</span>
+            <span class="time">16:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">UA1224</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">JFK</span>
+            <span class="time">23:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">LH6486</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">MAD</span>
+            <span class="time">02:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ4498</span>
+            <span class="departure">LAX</span>
+            <span class="arrival">ORD</span>
+            <span class="time">06:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ8716</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">AMS</span>
+            <span class="time">17:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">IB1782</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">DXB</span>
+            <span class="time">22:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">UA3657</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">ORD</span>
+            <span class="time">12:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">AF6339</span>
+            <span class="departure">JFK</span>
+            <span class="arrival">LAX</span>
+            <span class="time">23:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">AA8481</span>
+            <span class="departure">AMS</span>
+            <span class="arrival">MAD</span>
+            <span class="time">01:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">UA7222</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">MAD</span>
+            <span class="time">04:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">EK7242</span>
+            <span class="departure">SIN</span>
+            <span class="arrival">CDG</span>
+            <span class="time">19:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">LH1068</span>
+            <span class="departure">AMS</span>
+            <span class="arrival">LHR</span>
+            <span class="time">20:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL1257</span>
+            <span class="departure">LAX</span>
+            <span class="arrival">MAD</span>
+            <span class="time">22:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">IB3602</span>
+            <span class="departure">LAX</span>
+            <span class="arrival">JFK</span>
+            <span class="time">12:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">AA6632</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">FRA</span>
+            <span class="time">19:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">AF6321</span>
+            <span class="departure">SIN</span>
+            <span class="arrival">MAD</span>
+            <span class="time">12:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">LH3815</span>
+            <span class="departure">AMS</span>
+            <span class="arrival">DXB</span>
+            <span class="time">20:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">BA967</span>
+            <span class="departure">JFK</span>
+            <span class="arrival">CDG</span>
+            <span class="time">16:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL8200</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">ORD</span>
+            <span class="time">17:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">UA3051</span>
+            <span class="departure">AMS</span>
+            <span class="arrival">ORD</span>
+            <span class="time">11:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">IB3565</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">CDG</span>
+            <span class="time">16:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL6542</span>
+            <span class="departure">DXB</span>
+            <span class="arrival">FRA</span>
+            <span class="time">21:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">EK6937</span>
+            <span class="departure">LAX</span>
+            <span class="arrival">CDG</span>
+            <span class="time">20:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">EK956</span>
+            <span class="departure">DXB</span>
+            <span class="arrival">SIN</span>
+            <span class="time">09:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">LH175</span>
+            <span class="departure">ORD</span>
+            <span class="arrival">DXB</span>
+            <span class="time">00:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">LH3255</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">ORD</span>
+            <span class="time">08:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL4233</span>
+            <span class="departure">MAD</span>
+            <span class="arrival">FRA</span>
+            <span class="time">22:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ2678</span>
+            <span class="departure">AMS</span>
+            <span class="arrival">JFK</span>
+            <span class="time">04:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">LH6608</span>
+            <span class="departure">ORD</span>
+            <span class="arrival">CDG</span>
+            <span class="time">00:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">SQ6236</span>
+            <span class="departure">SIN</span>
+            <span class="arrival">JFK</span>
+            <span class="time">13:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">IB2408</span>
+            <span class="departure">LAX</span>
+            <span class="arrival">CDG</span>
+            <span class="time">10:45</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">KL2302</span>
+            <span class="departure">LAX</span>
+            <span class="arrival">MAD</span>
+            <span class="time">13:15</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">IB6412</span>
+            <span class="departure">FRA</span>
+            <span class="arrival">ORD</span>
+            <span class="time">02:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">DL7465</span>
+            <span class="departure">ORD</span>
+            <span class="arrival">AMS</span>
+            <span class="time">12:30</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">BA9545</span>
+            <span class="departure">CDG</span>
+            <span class="arrival">JFK</span>
+            <span class="time">01:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">IB7383</span>
+            <span class="departure">ORD</span>
+            <span class="arrival">SIN</span>
+            <span class="time">16:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">UA3511</span>
+            <span class="departure">JFK</span>
+            <span class="arrival">CDG</span>
+            <span class="time">06:00</span>
+        </div>
+    
+        <div class="flight">
+            <span class="flight-number">IB2786</span>
+            <span class="departure">DXB</span>
+            <span class="arrival">SIN</span>
+            <span class="time">02:00</span>
+        </div>
+    
+</body>
+</html>

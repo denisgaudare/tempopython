@@ -1,0 +1,1 @@
+python main.py analyze data\experiments.ndjson

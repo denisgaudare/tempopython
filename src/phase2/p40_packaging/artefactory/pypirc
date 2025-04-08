@@ -1,0 +1,20 @@
+[distutils]
+index-servers =
+    artifactory
+    ansys_fact_dev
+    ansys_fact_prod
+
+[artifactory]
+repository = https://your-company.jfrog.io/artifactory/api/pypi/python-local/
+username = <TON_UTILISATEUR>
+password = <TON_MOT_DE_PASSE_OU_TOKEN>
+
+[ansys_fact_dev]
+repository = https://your-company.jfrog.io/artifactory/api/pypi/python-local/
+username = <TON_UTILISATEUR>
+password = <TON_MOT_DE_PASSE_OU_TOKEN>
+
+[ansys_fact_prod]
+repository = https://your-company.jfrog.io/artifactory/api/pypi/python-local/
+username = <TON_UTILISATEUR>
+password = <TON_MOT_DE_PASSE_OU_TOKEN>

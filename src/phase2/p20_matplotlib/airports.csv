@@ -1,0 +1,101 @@
+airport_id,name,city,country,iata,latitude,longitude
+1,North Judithbury Airport,East Jill,Philippines,ABW,57.510714,16.412504
+2,New Roberttown Airport,East Jessetown,Monaco,AFN,48.497353,29.703444
+3,Lake Debra Airport,Robinsonshire,Fiji,AFQ,-40.747808,-134.119613
+4,Port Lindachester Airport,Joshuaborough,Serbia,AYW,-19.926415,143.633336
+5,Curtisfurt Airport,West Melanieview,Sri Lanka,BGR,43.4959,129.85293
+6,Lake Stephenville Airport,Millerport,Switzerland,BJZ,56.860203,-104.372446
+7,Barbaraland Airport,Lake Jeremyport,Belgium,BLZ,-27.561134,-142.994296
+8,Port Craig Airport,Shawnstad,Central African Republic,CKI,41.415111,138.288493
+9,Michaelview Airport,New Cynthiaside,Saint Lucia,COH,-7.170939,43.438144
+10,East Steven Airport,Veronicaside,Cyprus,CQU,-39.908066,154.757166
+11,Meganton Airport,Port Antonio,Germany,CWP,52.398741,171.434172
+12,Adamsborough Airport,Jasonfort,Indonesia,EPR,45.400324,137.309834
+13,Thomasberg Airport,Lake Anna,Estonia,EYC,-56.777773,85.16321
+14,Hurstfurt Airport,Jeffreyberg,Malawi,FAI,-16.815889,155.093719
+15,Daviston Airport,East Courtneychester,Nepal,FBQ,44.290568,131.06305
+16,South Patrickmouth Airport,Tashatown,Pitcairn Islands,FDY,45.397411,-83.949945
+17,Lake Nicoleview Airport,Danielchester,Cayman Islands,FGY,42.358686,-141.085574
+18,Smithview Airport,New Rita,Trinidad and Tobago,FHC,53.381682,129.09357
+19,Meaganhaven Airport,East Nathaniel,Central African Republic,FTR,-31.083617,113.971178
+20,New Mariotown Airport,West Natashaport,Dominican Republic,FXW,-0.160579,-70.131288
+21,East Natalieland Airport,Lake Toddland,Senegal,GCH,43.394915,-98.065625
+22,East Donna Airport,West Allison,New Caledonia,GDX,-56.923623,-110.473276
+23,Brandtside Airport,Lake Larry,Paraguay,GFY,-17.325946,131.167059
+24,Samuelhaven Airport,Martinezbury,Bahrain,GGO,65.695584,-79.515003
+25,Andrewside Airport,New Jeffrey,Barbados,GKR,23.392626,-36.115782
+26,East Carloston Airport,Chadbury,Fiji,GNE,67.549459,13.037664
+27,Lewisberg Airport,Sanchezfort,Sri Lanka,GPQ,62.100828,-138.476969
+28,Leeville Airport,Gomezchester,Lao People's Democratic Republic,GPX,66.152079,-115.715586
+29,Lake Deniseville Airport,South Jessicaville,Egypt,GUL,65.129461,-84.432109
+30,East Amanda Airport,South Isaiah,Kyrgyz Republic,GYL,-45.907669,-23.557047
+31,Port Sandra Airport,Mortonside,Bolivia,GYW,34.710858,-67.076167
+32,Lake Yvettetown Airport,Port Melindaburgh,Ireland,HIT,18.807151,4.112301
+33,Olsonfurt Airport,East Nicholasfurt,Estonia,HZP,-9.924594,27.571696
+34,Mitchellside Airport,Mooreport,Cuba,IPF,-26.886074,75.162702
+35,New Jillton Airport,Brianshire,Lesotho,KBJ,-59.780134,153.20706
+36,North Susan Airport,Port Jacobland,Peru,KFZ,9.99876,78.9948
+37,South David Airport,New Brooke,Niger,KPN,36.45351,61.426262
+38,South Dianeshire Airport,Sarahborough,Paraguay,KXL,-12.651209,-154.809428
+39,Johnfurt Airport,Lake Debbie,Kuwait,KYZ,26.350899,-61.127987
+40,Sarahland Airport,South Christineshire,Bolivia,LFO,-19.190966,125.285501
+41,New Jasonview Airport,West Nicole,Turkmenistan,LHA,33.568054,-71.883983
+42,West Justin Airport,Bassport,New Zealand,LKH,-19.792994,-32.978553
+43,Lake Lisaport Airport,East Josephville,Samoa,LLM,-7.68795,-73.564127
+44,West Juan Airport,Lake Matthew,Poland,LYW,-43.452586,-28.63932
+45,Williamview Airport,North Cynthiaview,Aruba,MBT,62.247277,63.83446
+46,West Kellieview Airport,Lake Scott,Romania,MFK,57.364721,41.58537
+47,Hoffmanville Airport,Lake Rebeccaside,Argentina,NAI,-20.876516,17.257397
+48,Brandiberg Airport,Andersonport,Haiti,NCB,-59.947228,-76.711062
+49,West Jasonbury Airport,West Kimberlychester,Niger,NDF,-4.114541,28.794521
+50,East Michelle Airport,South Angel,Saint Pierre and Miquelon,OFP,25.111731,-12.604252
+51,Kimberlychester Airport,West Erik,Reunion,OGW,-2.519226,-103.067496
+52,South Monicafort Airport,East Lisa,Kuwait,OMU,1.514204,144.425097
+53,Kevinbury Airport,North Donna,Iran,OSE,43.483219,-118.911097
+54,Joshualand Airport,Michaelhaven,Iran,OTB,-48.97658,5.562724
+55,Sheilaville Airport,Gregoryview,Argentina,PNW,22.282311,-59.332228
+56,New Ryanmouth Airport,Obrienhaven,Brazil,PSB,46.39505,90.40973
+57,Lamborough Airport,Bradleychester,Afghanistan,PSF,27.463437,-99.12936
+58,West Ryan Airport,Cindyville,Saint Helena,QAH,-34.113109,-171.20686
+59,Williamchester Airport,Richardport,Micronesia,QCL,-28.170469,-8.950916
+60,East Robert Airport,Byrdburgh,Nicaragua,QGM,50.4659,-153.781837
+61,Richardtown Airport,Justinchester,Solomon Islands,QJJ,-6.122669,46.715537
+62,Stevenmouth Airport,New Thomas,United Arab Emirates,QPD,-34.723419,70.68753
+63,Lake Christopher Airport,Clarencebury,Peru,QPE,4.269032,-92.165602
+64,Jeffreyborough Airport,North Brandon,Lebanon,RNG,25.287541,-178.003865
+65,South Robertshire Airport,Lake Heather,Lithuania,RVU,37.625382,97.216628
+66,Sancheztown Airport,Port Ronaldburgh,Spain,SEJ,-46.143651,-26.94737
+67,Williamsbury Airport,South Dennismouth,Papua New Guinea,SFI,-37.134731,164.867775
+68,Stephaniemouth Airport,Rivasside,Kiribati,SIE,7.334508,-161.921381
+69,Lake Michelle Airport,Greenbury,Tajikistan,SRZ,-27.604224,125.401085
+70,Katiehaven Airport,Simsview,Kazakhstan,TDM,-0.659963,108.509977
+71,Lake Justinview Airport,Luisside,Belgium,TOL,26.785105,175.641283
+72,East Jesse Airport,Lake Jason,Israel,TOU,17.408801,162.014259
+73,Riveramouth Airport,Brownchester,Iceland,UEC,55.88537,40.554836
+74,Port Nicoleshire Airport,Woodsstad,French Southern Territories,UQG,33.505615,1.720139
+75,Castanedachester Airport,South Jeffrey,Jordan,USN,47.973992,17.233902
+76,Johnsonmouth Airport,Ramseymouth,Uruguay,VAU,56.637053,87.715959
+77,New Amanda Airport,Vargastown,Belize,VHB,1.707677,-86.691043
+78,Taylormouth Airport,North Jorge,Greece,VHR,-27.858834,49.558117
+79,South Mark Airport,Ramirezchester,El Salvador,VQW,39.555779,7.667933
+80,South Andrewside Airport,West Jeffreyland,Slovakia (Slovak Republic),VSP,21.477297,-81.144919
+81,Port Anthonybury Airport,Port Andrew,Cape Verde,WAS,-49.927164,-77.137866
+82,East Thomas Airport,New Staciemouth,Reunion,WGE,-24.677036,-64.904555
+83,Katieburgh Airport,Port Loriport,Botswana,WIR,10.219789,-130.185338
+84,West Barbarafurt Airport,Davidborough,Belarus,WJE,-29.936008,69.821932
+85,North Heidi Airport,Melissaville,South Africa,WOB,31.834488,-156.877614
+86,West Amandastad Airport,New Deborahtown,Thailand,WYC,-7.012082,15.340011
+87,Shortville Airport,Yumouth,Russian Federation,XCK,-5.94935,-105.53962
+88,South Gregory Airport,Christinaside,Singapore,XVC,-5.381343,145.741852
+89,Marshallshire Airport,Marcusbury,Switzerland,XWH,15.930324,70.388275
+90,West Nicolebury Airport,Hudsonfurt,Guadeloupe,YDD,51.375164,95.614047
+91,South Melissaburgh Airport,Lewisview,Guam,YFS,-10.550466,-177.87741
+92,Nicoleview Airport,New Stacyland,Dominican Republic,YIC,-14.271356,91.251045
+93,Freemanbury Airport,Brewerfort,Kiribati,YWE,50.948234,163.234922
+94,North Kellyfurt Airport,West Elizabeth,Heard Island and McDonald Islands,ZBF,-5.527233,89.105641
+95,Transtad Airport,Barajasside,Greenland,ZJO,10.9972,37.170932
+96,Jacquelineview Airport,Johnville,Saint Helena,ZNZ,-31.32997,-101.008212
+97,West David Airport,East Javier,Liberia,ZQL,-3.341323,-169.551065
+98,Jennyhaven Airport,Tinaborough,French Polynesia,ZQO,-16.303159,64.491079
+99,West Harry Airport,Lake Amandaview,Aruba,ZRA,-7.438833,-120.583897
+100,New Kellyberg Airport,Garciatown,Montserrat,ZVZ,0.760719,-134.053993

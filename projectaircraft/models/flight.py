@@ -13,4 +13,6 @@ class Flight(metaclass=NoInheritanceMeta):
     year: int
     range_km: float
     status: str
+    origin: str
+    destination: str
 

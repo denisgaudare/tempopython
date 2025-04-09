@@ -22,5 +22,5 @@ class LocalAirport:
     country: str
 
     def __post_init__(self):
-        self.landing_queue = deque()
-        self.takeoff_queue = deque()
+        self.landing_queue = deque() # FIFO
+        self.takeoff_queue = deque() # FIFO

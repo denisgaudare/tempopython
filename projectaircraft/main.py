@@ -12,6 +12,7 @@ def main():
     cdg = LocalAirport(code="CDG", name="Charles de Gaulle", city="Paris", country="France")
     tower = ControlTower(cdg)
 
+    # Tous les vols
     with OpenFlightData(config.DATA / "flights.csv") as file:
         fleet = Fleet.from_csv(file)
 

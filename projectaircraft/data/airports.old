@@ -1,0 +1,82 @@
+[
+{
+    "code": "FRA000",
+    "name": "Frankfurt 0",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "latitude": 50.0379,
+    "longitude": 8.5622,
+    "altitude": 5
+  },{
+    "code": "FRA001",
+    "name": "Frankfurt 1",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "latitude": 50.0379,
+    "longitude": 8.5622,
+    "altitude": 48
+  },{
+    "code": "LHR002",
+    "name": "Heathrow 2",
+    "city": "London",
+    "country": "UK",
+    "latitude": 51.47,
+    "longitude": -0.4543,
+    "altitude": 27
+  },{
+    "code": "DXB003",
+    "name": "Dubai International 3",
+    "city": "Dubai",
+    "country": "UAE",
+    "latitude": 25.2532,
+    "longitude": 55.3657,
+    "altitude": 92
+  },{
+    "code": "CDG004",
+    "name": "Charles de Gaulle 4",
+    "city": "Paris",
+    "country": "France",
+    "latitude": 49.0097,
+    "longitude": 2.5479,
+    "altitude": 10
+  },{
+    "code": "LHR005",
+    "name": "Heathrow 5",
+    "city": "London",
+    "country": "UK",
+    "latitude": 51.47,
+    "longitude": -0.4543,
+    "altitude": 100
+  },{
+    "code": "FRA006",
+    "name": "Frankfurt 6",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "latitude": 50.0379,
+    "longitude": 8.5622,
+    "altitude": 78
+  },{
+    "code": "JFK007",
+    "name": "John F. Kennedy 7",
+    "city": "New York",
+    "country": "USA",
+    "latitude": 40.6413,
+    "longitude": -73.7781,
+    "altitude": 83
+  },{
+    "code": "HND008",
+    "name": "Haneda 8",
+    "city": "Tokyo",
+    "country": "Japan",
+    "latitude": 35.5494,
+    "longitude": 139.7798,
+    "altitude": 92
+  },{
+    "code": "HND009",
+    "name": "Haneda 9",
+    "city": "Tokyo",
+    "country": "Japan",
+    "latitude": 35.5494,
+    "longitude": 139.7798,
+    "altitude": 97
+  }]

@@ -4,7 +4,6 @@ from jinja2 import Environment, FileSystemLoader
 from projectaircraft import config
 from projectaircraft.models.airport import Airport
 
-
 def generate_airports(n: int):
 
     CITIES = [
@@ -44,7 +43,7 @@ def render_airports_to_json(airports, templates, output_file):
         lstrip_blocks=True
     )
     template = env.get_template("airports_template.json.j2")
-    rendered = template.render(airports=airports)
+    rendered = template.render(aeroports=airports)
 
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(rendered)

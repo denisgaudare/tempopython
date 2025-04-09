@@ -18,7 +18,9 @@ def load_flights(csv_file):
             row['airline'],
             int(row['manufacture_year']),
             float(row['range_km']),
-            row['status']
+            row['status'],
+            row['origin'],
+            row['destination']
         )
         flights.append(flight)
     return flights
@@ -45,9 +47,9 @@ if __name__ == "__main__":
         with OpenFlightData(config.DATA / "flights.csv") as file:
             flights = load_flights(file)
             for f in flights[:5]:
-                print(f"{f.name} - {f.capacity} - {f.year}")
+                print(f)
 
-        with OpenFlightData(config.DATA / "airports.json") as file:
+        with OpenFlightData(config.DATA / "airports.old") as file:
             airports = load_airports(file)
             for a in airports[:5]:
-                print(f"{a.code} - {a.name} ({a.city}, {a.country})")
+                print(a)

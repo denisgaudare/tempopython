@@ -18,7 +18,7 @@ class DistanceMatrix:
 
     def get_distance(self, origin, destination):
 
-        # lazy loading
+        # lazy loading VS eager loading
         if self.distances is None:
            self._load_all()
 
@@ -26,6 +26,7 @@ class DistanceMatrix:
         reverse_key = (destination, origin)
         return self.distances.get(key) or self.distances.get(reverse_key) or None
 
-
 if __name__=="__main__":
-    dm = DistanceMatrix(config.DATA)
+    path = config.DATA / "distances.csv"
+    dm = DistanceMatrix(path)
+    print(dm.get_distance('CDG','FRA'))

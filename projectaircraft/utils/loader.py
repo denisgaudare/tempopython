@@ -1,6 +1,10 @@
 import csv
+import json
 
+from projectaircraft import config
 from projectaircraft.models.flight import Flight
+from projectaircraft.models.airport import Airport
+from projectaircraft.utils.context_managers import OpenFlightData, Timer
 
 
 def load_flights(csv_file):
@@ -18,3 +22,32 @@ def load_flights(csv_file):
         )
         flights.append(flight)
     return flights
+
+def load_airports(json_file):
+    data = json.load(json_file)
+    airports = []
+    for item in data:
+        airport = Airport(
+            code=item["code"],
+            name=item["name"],
+            city=item["city"],
+            country=item["country"],
+            latitude=float(item["latitude"]),
+            longitude=float(item["longitude"]),
+            altitude=int(item["altitude"])
+        )
+        airports.append(airport)
+
+    return airports
+
+if __name__ == "__main__":
+    with Timer():
+        with OpenFlightData(config.DATA / "flights.csv") as file:
+            flights = load_flights(file)
+            for f in flights[:5]:
+                print(f"{f.name} - {f.capacity} - {f.year}")
+
+        with OpenFlightData(config.DATA / "airports.json") as file:
+            airports = load_airports(file)
+            for a in airports[:5]:
+                print(f"{a.code} - {a.name} ({a.city}, {a.country})")

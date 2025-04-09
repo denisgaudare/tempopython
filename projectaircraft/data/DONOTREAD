@@ -1,0 +1,165 @@
+from dataclasses import dataclass, field
+from collections import deque
+import threading
+
+models/airport.py — avec des pistes et files partagées
+
+@dataclass
+class Airport:
+    code: str
+    name: str
+    city: str
+    country: str
+    runways: int = 2
+
+    def __post_init__(self):
+        self.landing_queue = deque()
+        self.takeoff_queue = deque()
+        self.lock = threading.Lock()
+
+
+
+------------------------------------
+Chaque Thread = une piste
+controller/tower.py
+
+
+import threading
+import time
+
+class RunwayWorker(threading.Thread):
+    def __init__(self, airport, runway_id):
+        super().__init__(daemon=True)
+        self.airport = airport
+        self.runway_id = runway_id
+        self.running = True
+
+    def run(self):
+        while self.running:
+            with self.airport.lock:
+                flight = None
+                if self.airport.landing_queue:
+                    flight = self.airport.landing_queue.popleft()
+                    action = "landing"
+                elif self.airport.takeoff_queue:
+                    flight = self.airport.takeoff_queue.popleft()
+                    action = "takeoff"
+
+                if flight:
+                    print(f"🛬 [Runway {self.runway_id}] {action.upper()} — {flight.flight_id}")
+                    flight.status = "on_ground" if action == "landing" else "flying"
+                else:
+                    # No operation to do
+                    pass
+
+            time.sleep(2)  # simulate time to complete operation
+
+    def stop(self):
+        self.running = False
+
+
+
+------------------------
+controller/tower_utils.py — requêtes
+def request_landing(airport, flight):
+    print(f"📥 Landing request: {flight.flight_id}")
+    with airport.lock:
+        airport.landing_queue.append(flight)
+
+def request_takeoff(airport, flight):
+    print(f"📤 Takeoff request: {flight.flight_id}")
+    with airport.lock:
+        airport.takeoff_queue.append(flight)
+
+from models.airport import Airport
+from models.flight import Flight
+from controller.tower import RunwayWorker
+from controller.tower_utils import request_landing, request_takeoff
+import time
+
+def main():
+    cdg = Airport(code="CDG", name="Charles de Gaulle", city="Paris", country="France", runways=2)
+
+    # Lancer les threads de piste
+    runways = [RunwayWorker(cdg, i+1) for i in range(cdg.runways)]
+    for r in runways:
+        r.start()
+
+    # Créer des vols
+    flights = [
+        Flight("AF123", "Air France"),
+        Flight("DL456", "Delta"),
+        Flight("BA789", "British Airways"),
+        Flight("EK888", "Emirates"),
+        Flight("JL101", "Japan Airlines"),
+        Flight("SQ007", "Singapore Airlines")
+    ]
+
+    # Ajouter les requêtes
+    request_takeoff(cdg, flights[0])
+    request_landing(cdg, flights[1])
+    request_takeoff(cdg, flights[2])
+    request_landing(cdg, flights[3])
+    request_landing(cdg, flights[4])
+    request_takeoff(cdg, flights[5])
+
+    # Laisser tourner un moment
+    time.sleep(15)
+
+    # Arrêter les threads proprement
+    for r in runways:
+        r.stop()
+
+if __name__ == "__main__":
+    main()
+
+
+=================================================================
+
+
+controller/tower.py version pour ThreadPool
+
+from models.airport import Airport
+from models.flight import Flight
+from controller.tower import runway_worker
+from controller.tower_utils import request_landing, request_takeoff
+import time
+from concurrent.futures import ThreadPoolExecutor
+import threading
+
+def main():
+    cdg = Airport(code="CDG", name="Charles de Gaulle", city="Paris", country="France", runways=3)
+
+    stop_event = threading.Event()
+
+    with ThreadPoolExecutor(max_workers=cdg.runways) as executor:
+        # Lancer les workers de piste
+        for i in range(cdg.runways):
+            executor.submit(runway_worker, cdg, i + 1, stop_event)
+
+        # Créer des vols
+        flights = [
+            Flight("AF123", "Air France"),
+            Flight("DL456", "Delta"),
+            Flight("BA789", "British Airways"),
+            Flight("EK888", "Emirates"),
+            Flight("JL101", "Japan Airlines"),
+            Flight("SQ007", "Singapore Airlines")
+        ]
+
+        # Ajouter les requêtes
+        request_takeoff(cdg, flights[0])
+        request_landing(cdg, flights[1])
+        request_takeoff(cdg, flights[2])
+        request_landing(cdg, flights[3])
+        request_landing(cdg, flights[4])
+        request_takeoff(cdg, flights[5])
+
+        # Laisser tourner quelques instants
+        time.sleep(15)
+
+        # Signaler l'arrêt à tous les workers
+        stop_event.set()
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,26 @@
+Python Perfectionnement LI250
+    Base : https://www.ib-formation.fr/formations/langages-informatiques/python-perfectionnement
+    Ajusté & Flexible
+
+# Participants
+11 ou 12 personnes (on se presente)
+Formateur : Denis Gaudaré
+
+# Horaires
+9h-12h45 / 13h45-17h15
++ 2 petites pauses par 1/2 journee
+
+# Emargement (Bienvenue par mail)
+    ou par QRCode/lien
+
+# Présentations, Discussions et Codage
+    Markdown & PDF & .py
+    Drive:
+        https://drive.google.com/drive/folders/1N_Lale9J24dkCeUAcGokN_AsVYzfj5Qf?usp=sharing
+    2 x 2 jours
+    Retour d'experience entre vous !!
+    Le formateur n'est pas omniscient
+    + Specificités organisationelles & fonctionnelles
+
+>>>>Questions/Remarques & Participation sont les bienvenues
+

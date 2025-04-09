@@ -2,19 +2,23 @@ class AutoReprMeta(type):
     def __new__(cls, name, bases, dct):
         # TODO : rajouter la fonction __repr__
             if '__repr__' not in dct:
-                def myrepr():
+                """def myrepr():
+                    pass
                     #return str avec les attributs et les valeurs d'un objet'
+                dct['__repr__'] = myrepr
+                """
+                print("Merci d'implementer REPR pour "+name)
+            return super().__new__(cls, name, bases, dct)
 
 
-                dct=["__repr__"] = myrepr
+class NoInheritanceMeta(type):
+    """Métaclasse empêchant l'héritage de la classe."""
 
-class Q(metaclass=AutoReprMeta):
-    def __repr__(self): # oriente debug dev
-        return f"{self.a} , {self.a}"
+    def __new__(cls, name, bases, class_dict):
+        if any(isinstance(base, NoInheritanceMeta) for base in bases):
+            raise TypeError(f"❌ La classe '{name}' ne peut pas hériter d'une classe utilisant NoInheritanceMeta.")
+        return super().__new__(cls, name, bases, class_dict)
 
 
-class R(metaclass=AutoReprMeta):
+class BaseModel(metaclass=AutoReprMeta):
     pass
-
-r = R()
-print(r)

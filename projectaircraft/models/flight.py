@@ -1,8 +1,10 @@
 from dataclasses import dataclass
 
-@dataclass
-class Flight:
-    __slots__ = ['name', 'capacity', 'fuel', 'airline', 'year', 'range_km', 'status']
+from projectaircraft.models.base import NoInheritanceMeta
+
+
+@dataclass(slots=True,repr=True)
+class Flight(metaclass=NoInheritanceMeta):
 
     name: str
     capacity: int
@@ -11,9 +13,4 @@ class Flight:
     year: int
     range_km: float
     status: str
-
-class FlighSecret():
-    __slots__ = ["varpublic"]
-    def __init__(self):
-        self.varpublic = "PUBLIC"
 

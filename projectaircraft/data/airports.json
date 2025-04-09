@@ -1,0 +1,82 @@
+[
+{
+    "code": "JFK000",
+    "name": "John F. Kennedy 0",
+    "city": "New York",
+    "country": "USA",
+    "latitude": 40.6413,
+    "longitude": -73.7781,
+    "altitude": 8
+  },{
+    "code": "CDG001",
+    "name": "Charles de Gaulle 1",
+    "city": "Paris",
+    "country": "France",
+    "latitude": 49.0097,
+    "longitude": 2.5479,
+    "altitude": 31
+  },{
+    "code": "CDG002",
+    "name": "Charles de Gaulle 2",
+    "city": "Paris",
+    "country": "France",
+    "latitude": 49.0097,
+    "longitude": 2.5479,
+    "altitude": 51
+  },{
+    "code": "JFK003",
+    "name": "John F. Kennedy 3",
+    "city": "New York",
+    "country": "USA",
+    "latitude": 40.6413,
+    "longitude": -73.7781,
+    "altitude": 16
+  },{
+    "code": "SIN004",
+    "name": "Changi 4",
+    "city": "Singapore",
+    "country": "Singapore",
+    "latitude": 1.3644,
+    "longitude": 103.9915,
+    "altitude": 10
+  },{
+    "code": "FRA005",
+    "name": "Frankfurt 5",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "latitude": 50.0379,
+    "longitude": 8.5622,
+    "altitude": 54
+  },{
+    "code": "DXB006",
+    "name": "Dubai International 6",
+    "city": "Dubai",
+    "country": "UAE",
+    "latitude": 25.2532,
+    "longitude": 55.3657,
+    "altitude": 50
+  },{
+    "code": "DXB007",
+    "name": "Dubai International 7",
+    "city": "Dubai",
+    "country": "UAE",
+    "latitude": 25.2532,
+    "longitude": 55.3657,
+    "altitude": 23
+  },{
+    "code": "SIN008",
+    "name": "Changi 8",
+    "city": "Singapore",
+    "country": "Singapore",
+    "latitude": 1.3644,
+    "longitude": 103.9915,
+    "altitude": 42
+  },{
+    "code": "CDG009",
+    "name": "Charles de Gaulle 9",
+    "city": "Paris",
+    "country": "France",
+    "latitude": 49.0097,
+    "longitude": 2.5479,
+    "altitude": 98
+  }]

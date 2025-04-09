@@ -1,18 +1,18 @@
+from projectaircraft.models.base import BaseModel
 from projectaircraft.models.flight import Flight
-
-
-class BaseModel:
-    pass
 
 class Fleet(BaseModel):
     def __init__(self, flights: list[Flight]):
         self.flights = flights
 
+    def select_all(self, filterkey):
+        return [f for f in self.flights if filterkey(f)]
+
     def long_flights(self) -> list[Flight]:
         return [f for f in self.flights if Fleet.is_long_range(f)]
 
     def active_flights(self) -> list[Flight]:
-        return [ f for f in self.flights if f.status == "Actif" ]
+        return [ f for f in self.flights if f.status == "active" ]
 
     def average_capacity(self) -> float:
         return sum(f.capacity for f in self.flights) / len(self.flights)

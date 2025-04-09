@@ -7,15 +7,17 @@ class ControlTower:
     def __init__(self, airport):
         self.airport = airport
 
-    def request_landing(self, flight:Flight):
-        print(f"✈️  Landing request: {flight.name}")
-        self.airport.landing_queue.append(flight)
+    def request_landing(self,flight):
+        print(f"📥 Landing request: {flight.name}")
+        with self.airport.lock:
+            self.airport.landing_queue.append(flight)
 
-    def request_takeoff(self, flight:Flight):
-        print(f"🛫 Takeoff request: {flight.name}")
-        self.airport.takeoff_queue.append(flight)
+    def request_takeoff(self, flight):
+        print(f"📤 Takeoff request: {flight.name}")
+        with self.airport.lock:
+            self.airport.takeoff_queue.append(flight)
 
-    def process_next_operation(self):
+    def process_next_operation(self): # OBSOLETE EN THREAD
         if self.airport.landing_queue:
             flight = self.airport.landing_queue.popleft()
             print(f"✅ Landing: {flight.name}")

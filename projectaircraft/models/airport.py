@@ -16,12 +16,13 @@ class Airport(metaclass=NoInheritanceMeta):
     altitude: int        # en mètres
 
 @dataclass
-class Airport:
+class LocalAirport:
     code: str
     name: str
     city: str
     country: str
     runways: int = 2
+
 
     def __post_init__(self):
         self.landing_queue = deque()

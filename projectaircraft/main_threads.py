@@ -16,6 +16,9 @@ def main():
     with OpenFlightData(config.DATA / "flights.csv") as file:
         fleet = Fleet.from_csv(file)
 
+    #Il faut utiliser les RunwayWorker (voir controller/worker)
+
+
     actives_only = lambda f : f.status == "active"
     flights = fleet.select_all(actives_only)
 

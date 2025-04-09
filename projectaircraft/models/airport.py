@@ -1,3 +1,4 @@
+import threading
 from collections import deque
 from dataclasses import dataclass
 
@@ -15,12 +16,14 @@ class Airport(metaclass=NoInheritanceMeta):
     altitude: int        # en mètres
 
 @dataclass
-class LocalAirport:
+class Airport:
     code: str
     name: str
     city: str
     country: str
+    runways: int = 2
 
     def __post_init__(self):
-        self.landing_queue = deque() # FIFO
-        self.takeoff_queue = deque() # FIFO
+        self.landing_queue = deque()
+        self.takeoff_queue = deque()
+        self.lock = threading.Lock()

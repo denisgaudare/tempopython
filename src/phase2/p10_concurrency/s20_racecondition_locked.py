@@ -3,14 +3,16 @@ import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 
-verrou = threading.Lock()
 
-counter = 0
-counter2 = 0
 FUZZ = True
 def fuzz():
     if FUZZ:
         time.sleep(random.random())
+
+
+verrou = threading.Lock()
+counter = 0 # data condition de concurrence
+
 
 def worker_verrou1():
     global counter

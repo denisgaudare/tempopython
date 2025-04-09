@@ -10,7 +10,8 @@ def fuzz():
         time.sleep(0.01)
 
 # File partagée
-q = queue.Queue()
+q = queue.Queue() # compteur
+pq = queue.Queue() #les messages successifs
 
 # Producteur : met 1000 "1" dans la file
 def producteur():

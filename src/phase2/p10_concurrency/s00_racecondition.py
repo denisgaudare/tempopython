@@ -4,7 +4,7 @@ import time
 
 counter = 0 # COURSE A LA VALEUR
 
-FUZZ = True
+FUZZ = False
 def fuzz():
     if FUZZ:
         time.sleep(random.random())

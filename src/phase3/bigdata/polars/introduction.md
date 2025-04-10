@@ -63,7 +63,7 @@ df.filter(pl.col("age") > 30)
 ### 🔁 GroupBy
 
 ```python
-df.groupby("name").agg(pl.col("age").mean())
+df.group_by("name").agg(pl.col("age").mean())
 ```
 
 ---
@@ -114,7 +114,7 @@ Avantages :
 | Action                   | Pandas                             | Polars                               |
 |--------------------------|------------------------------------|--------------------------------------|
 | Sélection conditionnelle | `df[df["x"] > 0]`                  | `df.filter(pl.col("x") > 0)`         |
-| GroupBy + agg            | `df.groupby("x")["y"].mean()`      | `df.groupby("x").agg(pl.mean("y"))`  |
+| GroupBy + agg            | `df.groupby("x")["y"].mean()`      | `df.group_by("x").agg(pl.mean("y"))` |
 | Renommage                | `df.rename(columns={"a": "b"})`    | `df.rename({"a": "b"})`              |
 | Fusion (merge)           | `df.merge(df2, on="id")`           | `df.join(df2, on="id")`              |
 

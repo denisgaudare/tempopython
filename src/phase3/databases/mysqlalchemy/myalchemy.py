@@ -14,6 +14,9 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # --- 2. Définition du modèle ---
+
+
+#OBJECT - RELATIONAL - MAPPING
 class Product(Base):
     __tablename__ = 'products'
 
@@ -21,7 +24,7 @@ class Product(Base):
     name = Column(String(100), nullable=False)
     price = Column(Numeric(10, 2), nullable=False)
 
-# --- 3. Création des tables ---
+# --- 3. Création des tables --- SI BESOIN
 Base.metadata.create_all(engine)
 
 # --- 4. Insertion de données ---

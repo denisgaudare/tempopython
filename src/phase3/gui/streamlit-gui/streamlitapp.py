@@ -5,13 +5,14 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
+
 st.set_page_config(layout="wide")
 st.title("✈️ Flights & Airports - Visualisation des retards")
 
 # --- Chargement des données ---
 @st.cache_data
 def load_data():
-    p = Path("..")
+    p = Path("..").absolute()
     flights = pd.read_csv(p / "flights.csv", parse_dates=["departure_time", "scheduled_arrival_time", "arrival_time"])
     airports = pd.read_csv(p / "airports.csv")
     return flights, airports

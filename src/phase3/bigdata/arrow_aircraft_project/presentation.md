@@ -108,11 +108,11 @@ table3 = feather.read_table("data.feather")
 
 ## 🔁 pyarrow vs pandas vs polars
 
-| Outil      | Typé | Colonnaire | Zéro-copy | Eager/Lazy | Principal usage                   |
-|------------|------|------------|-----------|------------|-----------------------------------|
-| pandas     | ❌   | ❌         | ❌        | Eager      | Manipulation simple               |
-| pyarrow    | ✅   | ✅         | ✅        | Eager      | Backend, interopérabilité         |
-| polars     | ✅   | ✅         | ✅        | Lazy/Eager | Traitement rapide de gros volumes |
+| Outil      | Typé  | Colonnaire | Zéro-copy | Eager/Lazy | Principal usage                   |
+|------------|-------|------------|-----------|------------|-----------------------------------|
+| pandas     | ❌(np) | ❌         | ❌        | Eager      | Manipulation simple               |
+| pyarrow    | ✅     | ✅         | ✅        | Eager      | Backend, interopérabilité         |
+| polars     | ✅     | ✅         | ✅        | Lazy/Eager | Traitement rapide de gros volumes |
 
 ---
 

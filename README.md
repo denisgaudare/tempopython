@@ -1,2 +1,3 @@
 # tempopython
-Temporaire Python Transfert
+Temporaire Python Transfert For Training
+Denis Gaudaré

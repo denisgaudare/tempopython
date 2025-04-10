@@ -21,7 +21,7 @@ winmm.timeGetTime.restype = wintypes.DWORD
 SND_FILENAME = 0x00020000
 SND_ASYNC = 0x0001
 print("Lecture simple de WAV avec PlaySound...")
-r = winmm.PlaySoundA(b"data/testsirene.wav", None, SND_FILENAME | SND_ASYNC)
+#r = winmm.PlaySoundA(b"data/testsirene.wav", None, SND_FILENAME | SND_ASYNC)
 time.sleep(2)
 
 # === Utiliser mciSendStringA pour jouer un MP3 ===

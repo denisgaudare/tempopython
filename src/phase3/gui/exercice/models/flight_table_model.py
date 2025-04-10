@@ -1,5 +1,7 @@
 from PySide6.QtCore import QAbstractTableModel, Qt, QModelIndex
-from models.flight import Flight
+
+from projectaircraft.models.flight import Flight
+
 
 class FlightTableModel(QAbstractTableModel):
     def __init__(self, flights: list[Flight]):

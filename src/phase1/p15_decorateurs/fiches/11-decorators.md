@@ -122,10 +122,10 @@ def type_checker(types):
         sig = inspect.signature(func)  # Récupère la signature de la fonction
         
         def wrapper(*args, **kwargs):
-            bound_args = sig.bind(*args, **kwargs)  # Associe les arguments aux paramètres
+            bound_args = sig.bind(*args, **kwargs)  # Associe les booster aux paramètres
             bound_args.apply_defaults()
 
-            # Vérification des types des arguments
+            # Vérification des types des booster
             for param, value in bound_args.arguments.items():
                 if param in types and not isinstance(value, types[param]):
                     raise TypeError(f"Argument '{param}' doit être de type {types[param].__name__}, mais {type(value).__name__} reçu")

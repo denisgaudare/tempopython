@@ -96,7 +96,7 @@ def checkarguments(func):
 
         errors = []
 
-        # Iterate over the positional arguments
+        # Iterate over the positional booster
         for i, arg in enumerate(args):
             param_name = list(parameters.keys())[i]
             param_type = parameters[param_name].annotation
@@ -104,7 +104,7 @@ def checkarguments(func):
                 msg = f">>>>Argument {param_name} doit etre de type {param_type.__name__}"
                 errors.append(msg)
 
-        # Iterate over the keyword arguments
+        # Iterate over the keyword booster
         for param_name, arg in kwargs.items():
             param_type = parameters[param_name].annotation
             if not isinstance(arg, param_type):

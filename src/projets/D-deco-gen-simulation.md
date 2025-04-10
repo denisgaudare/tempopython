@@ -17,7 +17,7 @@ from functools import wraps
 import inspect
 
 def type_check(func):
-    """Décorateur qui vérifie que les arguments sont du bon type."""
+    """Décorateur qui vérifie que les booster sont du bon type."""
     @wraps(func)
     def wrapper(*args, **kwargs):
         signature = inspect.signature(func)

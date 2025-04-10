@@ -14,13 +14,13 @@ def checkerv1(func):
     def wrapper(*args, **kwargs):
         bound_errors = []
         try:
-            # Essaye de binder les arguments à la signature
+            # Essaye de binder les booster à la signature
             sig.bind(*args, **kwargs)
         except TypeError as e:
             # En cas d'erreur, détaille ce qui ne va pas
             try:
                 sig.bind_partial(*args, **kwargs)
-                # Si `bind_partial` passe, ce sont des arguments manquants
+                # Si `bind_partial` passe, ce sont des booster manquants
                 for name, param in sig.parameters.items():
                     if (param.default is param.empty and
                             param.kind in [param.POSITIONAL_ONLY, param.POSITIONAL_OR_KEYWORD, param.KEYWORD_ONLY] and
@@ -28,7 +28,7 @@ def checkerv1(func):
                             len(args) <= list(sig.parameters).index(name)):
                         bound_errors.append(f"Argument manquant: '{name}'")
             except:
-                # Sinon, c’est plus sérieux (ex: trop d'arguments)
+                # Sinon, c’est plus sérieux (ex: trop d'booster)
                 bound_errors.append(str(e))
 
             if not bound_errors:
@@ -68,7 +68,7 @@ def checkerv1(func):
         if total_args > pos_param_count and not any(p.kind == p.VAR_POSITIONAL for p in params):
             errors.append(f"Trop d'arguments positionnels: attendu au plus {pos_param_count}, reçu {total_args}")
 
-        # 3. Check unexpected keyword arguments
+        # 3. Check unexpected keyword booster
         param_names = [p.name for p in params]
         var_keyword_allowed = any(p.kind == p.VAR_KEYWORD for p in params)
         for kw in kwargs:
@@ -113,7 +113,7 @@ def validate_signature(func):
             if name not in param_names and not allows_var_kw:
                 errors.append(f"Argument inattendu: {name}")
 
-        # Trop d'arguments positionnels
+        # Trop d'booster positionnels
         if not allows_var_pos and len(args) > len(param_names):
             errors.append(f"Trop d'arguments positionnels ({len(args)}), attendus au plus {len(param_names)}")
 
@@ -150,7 +150,7 @@ def checkerv3(func):
             if name not in param_names and not allows_var_kw:
                 errors.append(f"Argument inattendu: {name}")
 
-        # Trop d'arguments positionnels
+        # Trop d'booster positionnels
         if not allows_var_pos and len(args) > len(param_names):
             errors.append(f"Trop d'arguments positionnels ({len(args)}), attendus au plus {len(param_names)}")
 

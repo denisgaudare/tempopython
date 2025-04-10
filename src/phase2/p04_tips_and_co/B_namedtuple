@@ -1,0 +1,122 @@
+## ✅ Exemple : Modéliser un vol avec `namedtuple`
+
+```python
+from collections import namedtuple
+
+# Création du type Vol avec 4 champs
+Vol = namedtuple('Vol', ['code', 'origine', 'destination', 'retard_min'])
+
+# Instanciation d’un vol
+vol1 = Vol(code='AF123', origine='CDG', destination='JFK', retard_min=15)
+
+# Accès aux données par nom de champ
+print(f"Vol {vol1.code} de {vol1.origine} vers {vol1.destination}")
+print(f"Retard estimé : {vol1.retard_min} minutes")
+
+# Accès par index (comme un tuple classique)
+print(vol1[0])  # 'AF123'
+
+# Déstructuration possible
+code, origine, destination, retard = vol1
+print(destination)  # JFK
+
+# Création à partir d’un iterable
+data = ['BA456', 'LHR', 'DXB', 0]
+vol2 = Vol._make(data)
+
+# Conversion en dict pour export JSON, par exemple
+print(vol2._asdict())
+```
+---
+
+## 🧠 Pourquoi utiliser `namedtuple` ?
+
+- ✅ Immuable (comme un tuple)
+- ✅ Accès **lisible** via des **noms de champs**
+- ✅ Moins lourd que `class + __init__`
+- ✅ Compatible avec le typage statique (`typing.NamedTuple`)
+
+---
+
+## 🚀 Bonus : version typée (Python 3.6+)
+
+```python
+from typing import NamedTuple
+
+class Vol(NamedTuple):
+    code: str
+    origine: str
+    destination: str
+    retard_min: int
+```
+---
+
+## 🆚 `namedtuple` vs `dataclass`
+
+| Critère                     | `namedtuple`                            | `dataclass` (Python 3.7+)                |
+|----------------------------|------------------------------------------|------------------------------------------|
+| Syntaxe                    | Hérité de `collections` ou `typing`     | Mot-clé `@dataclass`                     |
+| Immuable par défaut        | ✅ Oui (`tuple` immuable)               | ❌ Non, mais peut être rendu immuable    |
+| Accès par nom              | ✅ Oui                                   | ✅ Oui                                   |
+| Type hint                  | 🟡 Partiel (`typing.NamedTuple`)         | ✅ Complet                               |
+| Valeurs par défaut         | ❌ Non (possible mais verbeux)           | ✅ Oui, très facile                      |
+| Méthodes personnalisées    | ❌ Complexe à ajouter                    | ✅ Naturelles avec des méthodes de classe |
+| Mutabilité                 | ❌ Non (doit recréer l’objet)            | ✅ Par défaut                            |
+| Méthodes auto-générées     | `.asdict()`, `.make()`                   | `__init__`, `__repr__`, `__eq__`, etc.  |
+| Performance                | ✅ Très léger et rapide                  | 🟡 Moins rapide mais plus flexible       |
+
+---
+
+## 🧪 Exemples comparés
+
+### 🔸 `namedtuple`
+
+```python
+from collections import namedtuple
+
+Vol = namedtuple('Vol', ['code', 'origine', 'destination'])
+
+v = Vol('AF123', 'CDG', 'JFK')
+print(v.code)  # AF123
+```
+
+### 🔹 `dataclass`
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class Vol:
+    code: str
+    origine: str
+    destination: str
+    retard: int = 0  # valeur par défaut
+
+v = Vol('AF123', 'CDG', 'JFK')
+print(v.code)  # AF123
+v.retard = 15  # possible car mutable
+```
+
+---
+
+## 🔒 Rendre une `dataclass` immuable
+
+```python
+@dataclass(frozen=True)
+class Vol:
+    code: str
+    origine: str
+    destination: str
+```
+
+---
+
+## 🧠 En résumé :
+
+| Tu veux...                            | Utilise...     |
+|--------------------------------------|----------------|
+| Un conteneur simple, immutable, rapide | `namedtuple`   |
+| Une structure modifiable et évolutive  | `@dataclass`   |
+| Du typage, des valeurs par défaut, des méthodes | `@dataclass`   |
+
+---

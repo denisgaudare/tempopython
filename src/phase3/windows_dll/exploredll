@@ -1,0 +1,98 @@
+---
+
+## 🔍 1. **Explorer une DLL en détail**
+Une DLL (Dynamic Link Library) contient des fonctions exportées en C/C++ ou autres langages compilés.
+
+### 🧰 Outils pour explorer une DLL
+
+| Outil                    | Utilité principale                                |
+|--------------------------|----------------------------------------------------|
+| **`dumpbin /exports`**   | Liste les fonctions exportées (inclus dans Visual Studio) |
+| **`Dependency Walker`**  | Explore visuellement les DLL importées/exportées   |
+| **`DLL Export Viewer`**  | Interface graphique simple pour voir les fonctions |
+| **`Ghidra / IDA Free`**  | Reverse engineering (analyse binaire poussée)      |
+| **`objdump` / `nm`**     | Outils GNU pour inspection (Linux/MinGW)           |
+
+---
+
+## 🧪 Exemple avec `dumpbin`
+
+```bash
+dumpbin /exports your_library.dll
+```
+
+Tu obtiens :
+```
+ordinal hint RVA      name
+      1    0   00011000  add_numbers
+      2    1   00011030  multiply_numbers
+```
+
+---
+
+## 🧩 2. Connecter une DLL avec Python
+
+### 📦 Utilisation standard : `ctypes`
+
+```python
+import ctypes
+
+# Charger la DLL
+mydll = ctypes.CDLL("your_library.dll")
+
+# Définir les types des fonctions si possible
+mydll.add_numbers.argtypes = [ctypes.c_int, ctypes.c_int]
+mydll.add_numbers.restype = ctypes.c_int
+
+# Appeler une fonction
+result = mydll.add_numbers(5, 3)
+print(result)  # → 8
+```
+
+### ✅ Conseils pratiques :
+- **Toujours déclarer `argtypes` et `restype`** pour éviter des crashs.
+- Utiliser `ctypes.byref()` ou `ctypes.POINTER` pour les pointeurs.
+- Tu peux mapper des structs C avec `ctypes.Structure`.
+
+---
+
+### 🧬 Autres alternatives
+
+| Outil        | Description                                     | Avantages                         |
+|--------------|-------------------------------------------------|-----------------------------------|
+| `ctypes`     | Standard Python (pas de dépendance)             | Simple et portable                |
+| `cffi`       | Interface C plus moderne                        | Lisibilité, typage, compilation   |
+| `pybind11`   | Interface C++ → Python via module compilé       | Puissant, mais nécessite CMake    |
+| `SWIG`       | Générateur de bindings multi-langages           | Automatique mais complexe         |
+
+---
+
+## 🧠 Exemple avec structure C :
+
+```c
+// C side
+struct Point {
+    int x;
+    int y;
+};
+int distance(struct Point* p);
+```
+
+```python
+class Point(ctypes.Structure):
+    _fields_ = [("x", ctypes.c_int), ("y", ctypes.c_int)]
+
+p = Point(3, 4)
+print(mydll.distance(ctypes.byref(p)))
+```
+
+---
+
+## 🔐 DLL non exportée (sans symboles) ?
+
+Si aucune fonction n’est visible :
+- La DLL a été compilée sans export.
+- Tu dois soit avoir un **header (.h)** ou la **doc du développeur**.
+- Ou utiliser des outils comme Ghidra pour reverse-engineering.
+
+---

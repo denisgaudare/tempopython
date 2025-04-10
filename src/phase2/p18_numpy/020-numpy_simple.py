@@ -4,6 +4,12 @@
 import numpy as np
 import time
 
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+
+# Moyenne de chaque ligne
+means = np.apply_along_axis(np.mean, axis=1, arr=matrix)
+print(means)  # [2. 5.]
+
 from commontools.consoles import pause
 
 # 02 - Benchmark
@@ -24,8 +30,8 @@ pause()
 
 # Création de deux matrices 1000x1000
 start = time.time()
-A = np.random.rand(1000, 1000)
-B = np.random.rand(1000, 1000)
+A = np.random.rand(10000, 10000)
+B = np.random.rand(10000, 10000)
 # Multiplication des matrices
 C = np.dot(A, B)
 print("NumPy:", time.time() - start)
@@ -81,7 +87,7 @@ plt.hist(sums, bins=range(10, 61), edgecolor="black")
 plt.title("Distribution de sommes de 10 dés (1000 essais)")
 plt.xlabel("Somme")
 plt.ylabel("Fréquence")
-plt.show()
+plt.savefig("histo.png")
 
 # 09 - Produit matriciel (ML)
 X = np.random.rand(100, 3)

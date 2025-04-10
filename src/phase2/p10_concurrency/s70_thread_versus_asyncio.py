@@ -5,8 +5,8 @@ import os
 import time
 import threading
 
-N_FILES = 2000 #essaye avec 5000
-ECRITURE = 6000 #essaye avec 1000
+N_FILES = 6000 #essaye avec 5000
+ECRITURE = 2000 #essaye avec 1000
 
 def create_and_delete_tempfile(index):
     with tempfile.NamedTemporaryFile(delete=False, mode='w+') as tmp:

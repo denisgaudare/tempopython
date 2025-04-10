@@ -1,0 +1,82 @@
+[
+{
+    "code": "HND000",
+    "name": "Haneda 0",
+    "city": "Tokyo",
+    "country": "Japan",
+    "latitude": 35.5494,
+    "longitude": null,
+    "altitude": 65
+  },{
+    "code": "SIN001",
+    "name": "Changi 1",
+    "city": "Singapore",
+    "country": "Singapore",
+    "latitude": 1.3644,
+    "longitude": 103.9915,
+    "altitude": 54
+  },{
+    "code": "FRA002",
+    "name": "Frankfurt 2",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "latitude": 50.0379,
+    "longitude": 8.5622,
+    "altitude": 44
+  },{
+    "code": "FRA003",
+    "name": "Frankfurt 3",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "latitude": 50.0379,
+    "longitude": 8.5622,
+    "altitude": 84
+  },{
+    "code": "FRA004",
+    "name": "Frankfurt 4",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "latitude": 50.0379,
+    "longitude": 8.5622,
+    "altitude": 82
+  },{
+    "code": "FRA005",
+    "name": "Frankfurt 5",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "latitude": 50.0379,
+    "longitude": 8.5622,
+    "altitude": 57
+  },{
+    "code": "FRA006",
+    "name": "Frankfurt 6",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "latitude": 50.0379,
+    "longitude": 8.5622,
+    "altitude": 97
+  },{
+    "code": "JFK007",
+    "name": "John F. Kennedy 7",
+    "city": "New York",
+    "country": "USA",
+    "latitude": 40.6413,
+    "longitude": -73.7781,
+    "altitude": -2
+  },{
+    "code": "HND008",
+    "name": "Haneda 8",
+    "city": "Tokyo",
+    "country": "Japan",
+    "latitude": 35.5494,
+    "longitude": 139.7798,
+    "altitude": -2
+  },{
+    "code": "JFK009",
+    "name": "John F. Kennedy 9",
+    "city": "New York",
+    "country": "USA",
+    "latitude": 40.6413,
+    "longitude": -73.7781,
+    "altitude": 58
+  }]

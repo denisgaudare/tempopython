@@ -1,4 +1,6 @@
 # Création du script Python complet
+import sys
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -6,9 +8,15 @@ from commontools.consoles import pause
 from phase2.p10_concurrency.calculs import karney_distance
 
 # Chargement des données
+
+chunksize= 5000
+# Traitement par chunk
 flights = pd.read_csv("flights.csv",
                       parse_dates=["departure_time", "scheduled_arrival_time", "arrival_time"])
-airports = pd.read_csv("airports.csv")
+
+airports = pd.read_json("airports.json")
+
+airports["code_iso"] = airports["code"].str[:3]
 
 # Nettoyage : vérification des données manquantes
 print("Données manquantes dans flights:")
@@ -30,15 +38,16 @@ pause()
 flights = flights.merge(
     airports.add_prefix("origin_"),
     left_on="origin_airport",
-    right_on="origin_airport_code",
+    right_on="code_iso",
     how="left"
 )
 flights = flights.merge(
     airports.add_prefix("dest_"),
     left_on="destination_airport",
-    right_on="dest_airport_code",
+    right_on="code_iso",
     how="left"
 )
+
 
 flights.info()
 pause()
